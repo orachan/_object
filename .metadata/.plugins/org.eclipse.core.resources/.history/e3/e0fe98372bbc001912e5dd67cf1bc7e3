@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+public class Table {
+	private ArrayList disposedCards_ = new ArrayList();
+	
+	public void disposedCard(Card card[]) {
+		
+		
+	}
+	
+
+}

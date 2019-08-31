@@ -1,0 +1,5 @@
+
+public class Mater {
+	private ArrayList players_ = new ArrayList();
+
+}

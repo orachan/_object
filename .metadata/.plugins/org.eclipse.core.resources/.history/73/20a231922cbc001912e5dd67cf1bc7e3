@@ -1,0 +1,13 @@
+
+public class Player {
+	private Master master_;
+	
+	private Table table_;
+	
+	private Hand myHand_ = new Hand();
+	
+	private String name_;
+	
+	
+
+}

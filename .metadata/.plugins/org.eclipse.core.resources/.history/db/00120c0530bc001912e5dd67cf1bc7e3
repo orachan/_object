@@ -1,0 +1,70 @@
+import sun.tools.tree.ThisExpression;
+
+public class Player {
+	private Master master_;
+	
+	private Table table_;
+	
+	private Hand myHand_ = new Hand();
+	
+	private String name_;
+	
+	//constructor
+	public Player (String name,Master master,Table table) {
+		this.master_ = Master;
+		this.table_ = table;
+		this.name_ = name;
+		
+	}
+	
+	//play method
+	public void play(Player nextPlayer) {
+		Hand nextHand = nextPlayer.showHand();
+		Card pickedCard = nextHand.pickCard();
+		
+		System.out.println(this + ":" + nextPlayer + "さんから" + pickedCard + "を引きました。");
+		
+		dealCard(pickedCard);
+		
+		if (myHand_.getNumberOfCards() == 0) {
+			master_.declareWin(this);
+		}
+		
+		else {
+			System.out.println(this + "：残りの手札は" + myHand_ + "です");
+			
+		}
+		
+	}
+	
+	//showhand method
+	public Hand showHand() {
+		if(myHand_.getNumberOfCards() == 1 ) {
+			master_.declareWin(this);
+		}
+		
+		myHand_.shuffle();
+		return myHand_;
+		
+	}
+	
+	//receivecard metod
+	public void receiveCard(Card card) {
+		dealCard(card);
+	}
+	
+	//dealcard metod
+	private void dealCard(Card card) {
+		myHand_.addCard(card);
+		
+		Card[] sameCards = myHand_.findNumberCard();
+		
+		if(sameCards != null) {
+			System.out.print(this + ":");
+			table_.disposedCard(sameCards);
+			
+			
+		}
+	}
+
+}

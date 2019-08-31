@@ -1,0 +1,19 @@
+
+public class Player {
+	private Master master_;
+	
+	private Table table_;
+	
+	private Hand myHand_ = new Hand();
+	
+	private String name_;
+	
+	//constructor
+	public Player (String name,Master master,Table table) {
+		this.master_ = Master;
+		this.table_ = table;
+		this.name_ = name;
+		
+	}
+
+}

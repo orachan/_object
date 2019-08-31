@@ -1,0 +1,6 @@
+
+public class Table {
+	private ArrayList disposedCards_ = new ArrayList();
+	
+
+}

@@ -1,0 +1,6 @@
+import java.util.ArrayList;
+
+public class Mater {
+	private ArrayList players_ = new ArrayList();
+
+}
